@@ -796,14 +796,9 @@
 
       const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
       window.open(url, "_blank");
-
-      // Limpa dados salvos após envio
-      try {
-        localStorage.removeItem(LS_KEY);
-      } catch (e) {
-        console.error("Erro ao limpar dados salvos:", e);
       }
     }
   </script>
 </body>
 </html>
+
