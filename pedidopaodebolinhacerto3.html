@@ -19,52 +19,50 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      font-size: 16px; /* fonte base maior */
     }
 
     .container {
       background: #ffffff;
-      padding: 28px; /* mais espaço interno */
-      max-width: 560px;
+      padding: 24px;
+      max-width: 540px;
       width: 100%;
-      border-radius: 14px;
+      border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
-      font-size: 1.6rem; /* maior */
-      margin-bottom: 6px;
+      font-size: 1.4rem;
+      margin-bottom: 4px;
       text-align: center;
-      font-weight: 700;
     }
 
     p.subtitulo {
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #555;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     label {
       display: block;
-      margin-bottom: 6px;
-      font-size: 1rem;
-      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      padding: 12px 14px; /* maior */
-      margin-bottom: 16px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
       border-radius: 8px;
       border: 1px solid #ddd;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     textarea {
-      min-height: 90px;
+      min-height: 80px;
       resize: vertical;
     }
 
@@ -75,10 +73,10 @@
 
     .btn-enviar {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       border-radius: 999px;
-      font-size: 1.1rem; /* maior */
-      font-weight: 700;
+      font-size: 1rem;
+      font-weight: 600;
       background: #25d366;
       color: #fff;
       transition: transform 0.1s ease, box-shadow 0.1s ease,
@@ -97,10 +95,10 @@
     }
 
     .aviso {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #777;
       text-align: center;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .obrigatorio {
@@ -113,7 +111,7 @@
 
     small {
       color: #777;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
 
     .grupo-sabores {
@@ -125,15 +123,13 @@
     }
 
     .grupo-sabores h2 {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       margin: 0 0 8px 0;
-      font-weight: 700;
     }
 
     .grupo-sabores h3 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin: 10px 0 6px;
-      font-weight: 600;
     }
 
     .linha-sabor {
@@ -151,7 +147,7 @@
     }
 
     .nome-sabor {
-      font-size: 1rem;
+      font-size: 0.9rem;
       flex: 1;
     }
 
@@ -162,12 +158,12 @@
     }
 
     .btn-qtd {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       border-radius: 999px;
       border: 1px solid #ccc;
       background: #fff;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -180,8 +176,8 @@
     .qtd-display {
       min-width: 34px;
       text-align: center;
-      font-size: 1rem;
-      padding: 6px 8px;
+      font-size: 0.95rem;
+      padding: 4px 6px;
       border-radius: 6px;
       border: 1px solid #ddd;
       background: #fff;
@@ -189,73 +185,6 @@
 
     .qtd-input-real {
       display: none;
-    }
-
-    /* TEMA ESCURO AUTOMÁTICO */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #1b1b1b;
-        color: #f2f2f2;
-      }
-
-      .container {
-        background: #2a2a2a;
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-        border: 1px solid #3a3a3a;
-      }
-
-      h1 {
-        color: #fff;
-      }
-
-      p.subtitulo,
-      label,
-      small,
-      .aviso {
-        color: #d7d7d7;
-      }
-
-      input,
-      select,
-      textarea {
-        background: #3a3a3a;
-        border: 1px solid #555;
-        color: #fff;
-      }
-
-      input::placeholder,
-      textarea::placeholder {
-        color: #aaa;
-      }
-
-      .grupo-sabores {
-        background: #333;
-        border: 1px solid #555;
-      }
-
-      .linha-sabor {
-        border-bottom: 1px dashed #555;
-      }
-
-      .btn-qtd {
-        border: 1px solid #bbb;
-        background: #3a3a3a;
-        color: #fff;
-      }
-
-      .qtd-display {
-        background: #454545;
-        border: 1px solid #666;
-        color: #fff;
-      }
-
-      .btn-enviar {
-        background: #128c4a;
-      }
-
-      .btn-enviar:hover {
-        background: #0e733c;
-      }
     }
   </style>
 </head>
@@ -270,27 +199,17 @@
       <label for="nome">
         Nome completo <span class="obrigatorio">*</span>
       </label>
-      <input
-        type="text"
-        id="nome"
-        placeholder="Seu nome"
-        required
-      />
+      <input type="text" id="nome" placeholder="Seu nome" required />
 
       <label for="telefone">
         Telefone (com DDD) <span class="obrigatorio">*</span>
       </label>
-      <input
-        type="tel"
-        id="telefone"
-        placeholder="(11) 99999-9999"
-        required
-      />
+      <input type="tel" id="telefone" placeholder="(11) 99999-9999" required />
 
-      <!-- SABORES E QUANTIDADES -->
+      <!-- SABORES -->
       <div class="grupo-sabores">
         <h2>Sabores de pão de bolinha <span class="obrigatorio">*</span></h2>
-        <small>Use os botões + e - para escolher a quantidade de cada sabor.</small>
+        <small>Use os botões + e - para escolher a quantidade</small>
 
         <h3>Doces</h3>
 
@@ -367,7 +286,7 @@
         </div>
       </div>
 
-      <!-- Forma de recebimento -->
+      <!-- Forma de entrega -->
       <label for="forma">
         Como você quer receber? <span class="obrigatorio">*</span>
       </label>
@@ -377,11 +296,8 @@
         <option value="entrega">Entrega</option>
       </select>
 
-      <!-- Retirada: unidade -->
       <div id="campo-retirada" class="campo-oculto">
-        <label for="unidade">
-          Unidade para retirada <span class="obrigatorio">*</span>
-        </label>
+        <label for="unidade">Unidade para retirada <span class="obrigatorio">*</span></label>
         <select id="unidade">
           <option value="">Selecione a unidade</option>
           <option value="Matriz">Matriz</option>
@@ -389,19 +305,11 @@
         </select>
       </div>
 
-      <!-- Entrega: endereço + pagamento -->
       <div id="campo-entrega" class="campo-oculto">
-        <label for="endereco">
-          Endereço para entrega <span class="obrigatorio">*</span>
-        </label>
-        <textarea
-          id="endereco"
-          placeholder="Rua, número, bairro, complemento/ponto de referência"
-        ></textarea>
+        <label for="endereco">Endereço para entrega <span class="obrigatorio">*</span></label>
+        <textarea id="endereco" placeholder="Rua, número, bairro, complemento"></textarea>
 
-        <label for="pagamento">
-          Forma de pagamento na entrega <span class="obrigatorio">*</span>
-        </label>
+        <label for="pagamento">Forma de pagamento <span class="obrigatorio">*</span></label>
         <select id="pagamento">
           <option value="">Selecione</option>
           <option value="pix">Pix</option>
@@ -411,47 +319,34 @@
       </div>
 
       <label for="data">
-        Data desejada para retirada/entrega <span class="obrigatorio">*</span><br>
-        <small>(Pedidos com no mínimo 1 dia de antecedência. Aos domingos estamos fechados.)</small>
+        Data desejada <span class="obrigatorio">*</span><br>
+        <small>(Pedidos com 1 dia de antecedência)</small>
       </label>
       <input type="date" id="data" required />
 
       <label for="horario">
         Horário aproximado <span class="obrigatorio">*</span><br>
-        <small>(entre 07:00 e 20:00)</small>
+        <small>(entre 07:30 e 20:00)</small>
       </label>
-      <input
-        type="time"
-        id="horario"
-        required
-        min="07:00"
-        max="20:00"
-      />
+      <input type="time" id="horario" required min="07:30" max="20:00" />
 
       <label for="observacoes">Observações</label>
-      <textarea
-        id="observacoes"
-        placeholder="Detalhes do pedido, informações extras, etc."
-      ></textarea>
+      <textarea id="observacoes" placeholder="Detalhes do pedido"></textarea>
 
       <button type="submit" class="btn-enviar">Enviar pedido pelo WhatsApp</button>
     </form>
 
     <p class="aviso">
-      Ao clicar em enviar, você será direcionado(a) para o WhatsApp com a
-      mensagem já pronta.
+      Ao clicar em enviar, você será direcionado(a) para o WhatsApp com a mensagem já pronta.
     </p>
   </div>
 
   <script>
     const numeroWhatsApp = "5511988921216";
-    const LS_KEY = "pedidoPaoBolinha";
     let dataMinimaISO = "";
 
     window.addEventListener("DOMContentLoaded", () => {
       const dataInput = document.getElementById("data");
-
-      // Data mínima (amanhã)
       const hoje = new Date();
       hoje.setDate(hoje.getDate() + 1); // amanhã
 
@@ -462,52 +357,36 @@
       dataMinimaISO = `${ano}-${mes}-${dia}`;
       dataInput.min = dataMinimaISO;
 
-      // Bloquear domingos
-      dataInput.addEventListener("change", () => {
-        if (!dataInput.value) return;
-
-        const dataSelecionada = new Date(dataInput.value + "T00:00:00");
-        const diaSemana = dataSelecionada.getDay(); // 0 = domingo
-
-        if (diaSemana === 0) {
-          alert("Estamos fechados aos domingos 💛\nPor favor, escolha outra data.");
-          dataInput.value = "";
-        }
-
-        salvarDados();
-      });
-
-      // Inicializar botões de quantidade
       inicializarBotoesQuantidade();
-
-      // Carregar dados salvos (se houver)
-      carregarDados();
-
-      // Configurar salvamento automático
-      configurarSalvamentoAutomatico();
-
-      // Atualizar campos de retirada/entrega com base na forma carregada
-      atualizarCamposForma();
     });
 
-    function atualizarCamposForma() {
-      const forma = document.getElementById("forma").value;
-      const campoRetirada = document.getElementById("campo-retirada");
-      const campoEntrega = document.getElementById("campo-entrega");
+    // EXIBE OU ESCONDE CAMPOS DE ENTREGA / RETIRADA
+    const formaSelect = document.getElementById("forma");
+    const campoRetirada = document.getElementById("campo-retirada");
+    const campoEntrega = document.getElementById("campo-entrega");
 
-      if (forma === "retirada") {
-        campoRetirada.style.display = "block";
-        campoEntrega.style.display = "none";
-      } else if (forma === "entrega") {
-        campoRetirada.style.display = "none";
-        campoEntrega.style.display = "block";
-      } else {
-        campoRetirada.style.display = "none";
-        campoEntrega.style.display = "none";
+    formaSelect.addEventListener("change", () => {
+      const valor = formaSelect.value;
+      campoRetirada.style.display = valor === "retirada" ? "block" : "none";
+      campoEntrega.style.display = valor === "entrega" ? "block" : "none";
+    });
+
+    // BLOQUEAR DOMINGOS
+    const dataInput = document.getElementById("data");
+
+    dataInput.addEventListener("change", () => {
+      if (!dataInput.value) return;
+
+      const dataSelecionada = new Date(dataInput.value + "T00:00:00");
+      const dia = dataSelecionada.getDay(); // 0 = domingo
+
+      if (dia === 0) {
+        alert("Estamos fechados aos domingos 💛\nPor favor, escolha outra data.");
+        dataInput.value = "";
       }
-    }
+    });
 
-    // Botões + e -
+    // BOTÕES + E -
     function inicializarBotoesQuantidade() {
       const linhas = document.querySelectorAll(".linha-sabor");
 
@@ -519,12 +398,9 @@
 
         btnMenos.addEventListener("click", () => {
           let atual = parseInt(inputReal.value || "0", 10);
-          if (atual > 0) {
-            atual -= 1;
-            inputReal.value = atual;
-            display.textContent = atual;
-            salvarDados();
-          }
+          if (atual > 0) atual -= 1;
+          inputReal.value = atual;
+          display.textContent = atual;
         });
 
         btnMais.addEventListener("click", () => {
@@ -532,160 +408,30 @@
           atual += 1;
           inputReal.value = atual;
           display.textContent = atual;
-          salvarDados();
         });
       });
     }
 
     function pegarQuantidade(id) {
       const el = document.getElementById(id);
-      if (!el) return 0;
-      const valor = el.value.trim();
-      if (!valor) return 0;
-      const n = parseInt(valor, 10);
+      const n = parseInt(el.value || "0", 10);
       return isNaN(n) ? 0 : n;
     }
 
-    // Coletar todos os dados do formulário para salvar
-    function obterDadosFormulario() {
-      const dados = {
-        nome: document.getElementById("nome").value.trim(),
-        telefone: document.getElementById("telefone").value.trim(),
-        forma: document.getElementById("forma").value,
-        unidade: document.getElementById("unidade").value,
-        endereco: document.getElementById("endereco").value.trim(),
-        pagamento: document.getElementById("pagamento").value,
-        data: document.getElementById("data").value,
-        horario: document.getElementById("horario").value,
-        observacoes: document.getElementById("observacoes").value.trim(),
-        qtds: {
-          doce_leite: document.getElementById("qtd_doce_leite").value,
-          chocolate: document.getElementById("qtd_chocolate").value,
-          misto: document.getElementById("qtd_misto").value,
-          goiabada: document.getElementById("qtd_goiabada").value,
-          presunto_queijo: document.getElementById("qtd_presunto_queijo").value,
-          frango: document.getElementById("qtd_frango").value,
-          quatro_queijos: document.getElementById("qtd_quatro_queijos").value,
-        },
-      };
-
-      return dados;
-    }
-
-    // Salvar no localStorage
-    function salvarDados() {
-      try {
-        const dados = obterDadosFormulario();
-        localStorage.setItem(LS_KEY, JSON.stringify(dados));
-      } catch (e) {
-        console.error("Erro ao salvar dados:", e);
-      }
-    }
-
-    // Carregar do localStorage
-    function carregarDados() {
-      try {
-        const bruto = localStorage.getItem(LS_KEY);
-        if (!bruto) return;
-
-        const dados = JSON.parse(bruto);
-
-        if (dados.nome) document.getElementById("nome").value = dados.nome;
-        if (dados.telefone) document.getElementById("telefone").value = dados.telefone;
-        if (dados.forma) document.getElementById("forma").value = dados.forma;
-        if (dados.unidade) document.getElementById("unidade").value = dados.unidade;
-        if (dados.endereco) document.getElementById("endereco").value = dados.endereco;
-        if (dados.pagamento) document.getElementById("pagamento").value = dados.pagamento;
-        if (dados.horario) document.getElementById("horario").value = dados.horario;
-        if (dados.observacoes) document.getElementById("observacoes").value = dados.observacoes;
-
-        // Restaurar data se ainda for válida e não for domingo
-        if (dados.data) {
-          const dataInput = document.getElementById("data");
-          const valorData = dados.data;
-          if (valorData >= dataMinimaISO) {
-            const d = new Date(valorData + "T00:00:00");
-            if (d.getDay() !== 0) {
-              dataInput.value = valorData;
-            }
-          }
-        }
-
-        // Restaurar quantidades
-        if (dados.qtds) {
-          const mapa = [
-            ["qtd_doce_leite", "doce_leite"],
-            ["qtd_chocolate", "chocolate"],
-            ["qtd_misto", "misto"],
-            ["qtd_goiabada", "goiabada"],
-            ["qtd_presunto_queijo", "presunto_queijo"],
-            ["qtd_frango", "frango"],
-            ["qtd_quatro_queijos", "quatro_queijos"],
-          ];
-
-          mapa.forEach(([idInput, chave]) => {
-            const input = document.getElementById(idInput);
-            const linha = input?.closest(".linha-sabor");
-            const display = linha?.querySelector(".qtd-display");
-            if (input && display && dados.qtds[chave] != null) {
-              const valor = parseInt(dados.qtds[chave], 10);
-              if (!isNaN(valor) && valor >= 0) {
-                input.value = valor;
-                display.textContent = valor;
-              }
-            }
-          });
-        }
-      } catch (e) {
-        console.error("Erro ao carregar dados:", e);
-      }
-    }
-
-    // Configurar salvamento automático em campos principais
-    function configurarSalvamentoAutomatico() {
-      const campos = [
-        "nome",
-        "telefone",
-        "forma",
-        "unidade",
-        "endereco",
-        "pagamento",
-        "data",
-        "horario",
-        "observacoes",
-      ];
-
-      campos.forEach((id) => {
-        const el = document.getElementById(id);
-        if (!el) return;
-
-        const evento =
-          el.tagName === "SELECT" || el.type === "date" || el.type === "time"
-            ? "change"
-            : "input";
-
-        el.addEventListener(evento, () => {
-          if (id === "forma") {
-            atualizarCamposForma();
-          }
-          salvarDados();
-        });
-      });
-    }
-
+    // ENVIO PARA WHATSAPP
     function enviarWhatsApp(event) {
       event.preventDefault();
 
       const nome = document.getElementById("nome").value.trim();
       const telefone = document.getElementById("telefone").value.trim();
 
-      const qtdDoceLeite       = pegarQuantidade("qtd_doce_leite");
-      const qtdChocolate       = pegarQuantidade("qtd_chocolate");
-      const qtdMisto           = pegarQuantidade("qtd_misto");
-      const qtdGoiabada        = pegarQuantidade("qtd_goiabada");
-      const qtdPresuntoQueijo  = pegarQuantidade("qtd_presunto_queijo");
-      const qtdFrango          = pegarQuantidade("qtd_frango");
-      const qtdQuatroQueijos   = pegarQuantidade("qtd_quatro_queijos");
+      const qtdDoceLeite = pegarQuantidade("qtd_doce_leite");
+      const qtdChocolate = pegarQuantidade("qtd_chocolate");
+      const qtdMisto = pegarQuantidade("qtd_misto");
+      const qtdGoiabada = pegarQuantidade("qtd_goiabada");
+      const qtdPresuntoQueijo = pegarQuantidade("qtd_presunto_queijo");
+      const qtdFrango = pegarQuantidade("qtd_frango");
+      const qtdQuatroQueijos = pegarQuantidade("qtd_quatro_queijos");
 
       const forma = document.getElementById("forma").value;
       const unidade = document.getElementById("unidade").value;
@@ -693,39 +439,27 @@
       const pagamento = document.getElementById("pagamento").value;
       const dataSelecionada = document.getElementById("data").value;
       const horario = document.getElementById("horario").value;
-      const observacoes = document
-        .getElementById("observacoes")
-        .value.trim();
+      const observacoes = document.getElementById("observacoes").value.trim();
 
       const totalUnidades =
-        qtdDoceLeite +
-        qtdChocolate +
-        qtdMisto +
-        qtdGoiabada +
-        qtdPresuntoQueijo +
-        qtdFrango +
-        qtdQuatroQueijos;
+        qtdDoceLeite + qtdChocolate + qtdMisto + qtdGoiabada +
+        qtdPresuntoQueijo + qtdFrango + qtdQuatroQueijos;
 
       if (!nome || !telefone || !forma || !dataSelecionada || !horario) {
-        alert("Por favor, preencha todos os campos obrigatórios.");
+        alert("Preencha todos os campos obrigatórios.");
         return;
       }
 
       if (totalUnidades <= 0) {
-        alert("Informe a quantidade em pelo menos um sabor de pão de bolinha.");
+        alert("Informe a quantidade em pelo menos um sabor.");
         return;
       }
 
-      // Valida retirada
-      if (forma === "retirada") {
-        if (!unidade) {
-          alert("Escolha a unidade para retirada (Matriz ou Vila Nova).");
-          return;
-        }
+      if (forma === "retirada" && !unidade) {
+        alert("Selecione a unidade para retirada.");
+        return;
       }
 
-      let pagamentoTexto = "";
-      // Valida entrega + pagamento
       if (forma === "entrega") {
         if (!endereco) {
           alert("Informe o endereço completo para entrega.");
@@ -736,49 +470,39 @@
           alert("Selecione a forma de pagamento na entrega.");
           return;
         }
-
-        if (pagamento === "pix") {
-          pagamentoTexto = "Pix";
-        } else if (pagamento === "maquininha") {
-          pagamentoTexto = "Maquininha (cartão)";
-        } else if (pagamento === "dinheiro") {
-          pagamentoTexto = "Dinheiro (troco em múltiplos de 50)";
-        }
       }
 
-      // Data e horário
       if (dataMinimaISO && dataSelecionada < dataMinimaISO) {
-        alert("Os pedidos precisam ser feitos com pelo menos 1 dia de antecedência.");
+        alert("Os pedidos precisam ser feitos com 1 dia de antecedência.");
         return;
       }
 
-      if (horario < "07:00" || horario > "20:00") {
-        alert("O horário deve ser entre 07:00 e 20:00.");
+      if (horario < "07:30" || horario > "20:00") {
+        alert("O horário deve ser entre 07:30 e 20:00.");
         return;
       }
 
-      const dataFormatada = new Date(dataSelecionada).toLocaleDateString(
-        "pt-BR",
-        { timeZone: "America/Sao_Paulo" }
-      );
+      const dataFormatada = new Date(dataSelecionada)
+        .toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" });
 
-      let formaTexto = "";
-      if (forma === "retirada") {
-        formaTexto = `Retirada na unidade: ${unidade}`;
-      } else if (forma === "entrega") {
-        formaTexto = `Entrega no endereço: ${endereco} | Pagamento: ${pagamentoTexto}`;
-      }
+      let formaTexto = forma === "retirada"
+        ? `Retirada na unidade: ${unidade}`
+        : `Entrega no endereço: ${endereco} | Pagamento: ${
+            pagamento === "pix"
+              ? "Pix"
+              : pagamento === "maquininha"
+              ? "Maquininha (cartão)"
+              : "Dinheiro (troco em múltiplos de 50)"}`
+        ;
 
       let linhasSabores = "";
-      function addLinha(nomeSabor, qtd) {
-        if (qtd > 0) {
-          linhasSabores += `- ${nomeSabor}: ${qtd} unidade(s)%0A`;
-        }
+      function addLinha(nome, qtd) {
+        if (qtd > 0) linhasSabores += `- ${nome}: ${qtd} unidade(s)%0A`;
       }
 
       addLinha("Doce de leite", qtdDoceLeite);
       addLinha("Chocolate", qtdChocolate);
-      addLinha("Misto (doce de leite e chocolate)", qtdMisto);
+      addLinha("Misto", qtdMisto);
       addLinha("Goiabada", qtdGoiabada);
       addLinha("Presunto e queijo", qtdPresuntoQueijo);
       addLinha("Frango", qtdFrango);
@@ -790,15 +514,16 @@
       mensagem += `Forma de recebimento: ${formaTexto}%0A`;
       mensagem += `Data desejada: ${dataFormatada}%0A`;
       mensagem += `Horário aproximado: ${horario}%0A%0A`;
-      mensagem += `Sabores e quantidades:%0A${linhasSabores}`;
-      mensagem += `%0ATotal de unidades: ${totalUnidades}%0A%0A`;
-      mensagem += `Observações: ${observacoes ? observacoes : "Nenhuma."}`;
+      mensagem += `Sabores e quantidades:%0A${linhasSabores}%0A`;
+      mensagem += `Total de unidades: ${totalUnidades}%0A%0A`;
+      mensagem += `Observações: ${observacoes || "Nenhuma."}`;
 
       const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
       window.open(url, "_blank");
-      }
     }
   </script>
 </body>
 </html>
+
+
 
